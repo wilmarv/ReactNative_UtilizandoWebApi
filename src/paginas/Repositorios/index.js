@@ -10,7 +10,7 @@ export default function Repositorios({ route, navigation }) {
 
     useEffect(async () => {
         if (estaNaTela) {
-            const resultado = await pegarRepositoriosDoUsuario(route.params.id);
+            const resultado = await pegarRepositoriosDoUsuario(route.params.login);
             setRepo(resultado);
         }
     }, [estaNaTela]);
@@ -32,7 +32,7 @@ export default function Repositorios({ route, navigation }) {
                 renderItem={({ item }) => (
                     <TouchableOpacity style={estilos.repositorio} onPress={() => navigation.navigate("InfoRepositorio", { item })}>
                         <Text style={estilos.repositorioNome}>{item.name}</Text>
-                        <Text style={estilos.repositorioData}>Atualizado em {item.data}</Text>
+                        <Text style={estilos.repositorioData}>Atualizado em {new Date(item.updated_at).toLocaleDateString('br')}</Text>
                     </TouchableOpacity>
                 )}
             />

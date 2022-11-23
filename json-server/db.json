@@ -21,12 +21,6 @@
   ],
   "repos": [
     {
-      "name": "alura-pikachu2",
-      "data": "1 de jan. de 2021",
-      "postId": 2,
-      "id": 2
-    },
-    {
       "id": 3,
       "name": "Arduino_AVES_Telemetria",
       "data": "1 de jan. de 2021",
@@ -39,7 +33,7 @@
       "postId": 1
     },
     {
-      "nome": "teste",
+      "name": "teste",
       "data": "1 de jan. de 2021",
       "postId": 2,
       "id": 1
@@ -61,6 +55,12 @@
       "name": "Alura_cursos",
       "data": "1 de jan. de 2021",
       "postId": 1
+    },
+    {
+      "name": "testCriar",
+      "data": "10 de fev",
+      "postId": 2,
+      "id": 764
     }
   ]
 }

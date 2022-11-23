@@ -9,7 +9,7 @@ export default function Repositorios({ route, navigation }) {
     const estaNaTela = useIsFocused();
 
     useEffect(async () => {
-        if(estaNaTela){
+        if (estaNaTela) {
             const resultado = await pegarRepositoriosDoUsuario(route.params.id);
             setRepo(resultado);
         }
@@ -20,7 +20,7 @@ export default function Repositorios({ route, navigation }) {
             <Text style={estilos.repositoriosTexto}>{repo.length} repositórios criados</Text>
             <TouchableOpacity
                 style={estilos.botao}
-                onPress={() => navigation.navigate('CriarRepositorio')}
+                onPress={() => navigation.navigate('CriarRepositorio', { id: route.params.id })}
             >
                 <Text style={estilos.textoBotao}>Adicionar novo repositório</Text>
             </TouchableOpacity>
